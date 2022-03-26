@@ -48,4 +48,3 @@ def num_user_skill(num):
     return num_user
 
 
-print(num_user_skill('python'))
