@@ -2,31 +2,24 @@ from candidates_json import candidates
 
 
 def load_candidates_from_json():
-    list_name = []
-    for candidate in candidates:
-        split_name = candidate['name'].split()
-        list_name.append(split_name[0])
-    return list_name
+    return candidates
 
 
-def get_candidate(candidate_id):
+def get_candidate(id_user):
     for candidate in candidates:
-        split_name = candidate['name'].split()
-        if candidate_id == split_name[0]:
+        if id_user == candidate['id']:
             return candidate['id']
 
 
-def get_candidates_by_name(candidate_name):
+def get_candidates_by_name(id_user):
     for candidate in candidates:
-        split_name = candidate['name'].split()
-        if candidate_name == split_name[0]:
-            return candidate_name
+        if id_user == candidate['id']:
+            return candidate['name']
 
 
-def get_candidates_by_skill(skill_name):
+def get_candidates_by_skill(id_user):
     for candidate in candidates:
-        split_name = candidate['name'].split()
-        if skill_name == split_name[0]:
+        if id_user == candidate['id']:
             return candidate['skills']
 
 
@@ -46,5 +39,6 @@ def num_user_skill(num):
         if num in split_skill:
             num_user += 1
     return num_user
+
 
 

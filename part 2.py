@@ -15,7 +15,7 @@ def all_candidates():
     return render_template('list.html', candidates=candidates)
 
 
-@app.route('/candidate/<x>')
+@app.route('/candidate/<int:x>')
 def individual_candidate(x):
     name = get_candidates_by_name(x)
     number_id = get_candidate(x)
